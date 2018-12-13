@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Header from './header';
-import './layout.css';
+import './global.css';
 
 const Layout = ({ children }) => (
-  <div>
+  <React.Fragment>
     <Header />
-    <div>{children}</div>
-  </div>
+    {children}
+  </React.Fragment>
 );
 
 Layout.propTypes = {

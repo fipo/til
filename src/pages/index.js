@@ -21,10 +21,10 @@ const IndexPage = ({ data }) => (
       ]}
     />
 
-    <div>
+    <main className='list'>
       {data.allMarkdownRemark.edges.map(({ node }) => {
         return (
-          <div key={node.id}>
+          <article className='post' key={node.id}>
             <h2>
               <Link to={node.frontmatter.path}>{node.frontmatter.title}</Link>
             </h2>
@@ -38,10 +38,10 @@ const IndexPage = ({ data }) => (
               </a>
               {node.frontmatter.date}
             </small>
-          </div>
+          </article>
         );
       })}
-    </div>
+    </main>
   </Layout>
 );
 

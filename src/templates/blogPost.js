@@ -11,13 +11,14 @@ class BlogPost extends React.Component {
 
     return (
       <Layout>
-        <h1>{data.markdownRemark.frontmatter.title}</h1>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: data.markdownRemark.html,
-          }}
-        />
-        <Link to="/">Back</Link>
+        <article className='post'>
+          <h2>{data.markdownRemark.frontmatter.title}</h2>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: data.markdownRemark.html,
+            }}
+          />
+        </article>
       </Layout>
     );
   }

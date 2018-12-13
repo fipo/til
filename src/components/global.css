@@ -1,3 +1,20 @@
+:root {
+  --white: #fff;
+  --black: #000;
+
+  --green: #154743;
+  --silver: #BDD9BF;
+  --sangria: #92140C;
+  --silver-pink: #C4BBAF;
+  --grullo: #A5978B;
+
+  --smoky-black: #0C120C;
+  --harvard-crimson: #C20114;
+  --nickel: #6d7275;
+  --light-gray: #c7d6d5;
+  --timberwolf: #ddd7d7;
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -38,6 +55,8 @@ template {
   display: none;
 }
 a {
+  color: var(--harvard-crimson);
+  text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
@@ -183,7 +202,7 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em georgia, serif;
+  font: 112.5%/1.45em Lora, serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -197,8 +216,9 @@ html {
   box-sizing: inherit;
 }
 body {
+  background-color: var(--light-gray);
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  font-family: Lora, serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -219,22 +239,41 @@ img {
   margin-bottom: 1.45rem;
 }
 h1 {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
   padding-bottom: 0;
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin: 3rem 0 .5rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
   text-rendering: optimizeLegibility;
-  font-size: 2.25rem;
+  font-size: 4.5rem;
   line-height: 1.1;
+  text-align: center;
 }
+
+h1 a {
+  color: var(--smoky-black);
+  text-transform: uppercase;
+}
+
+h2 a {
+  color: var(--smoky-black);
+  text-decoration: none;
+}
+
+h2 a:hover {
+  color: var(--harvard-crimson);
+}
+
+.subtitle {
+  text-align: center;
+  display: block;
+  margin-bottom: 2rem;
+  font-size: 100%;
+}
+
 h2 {
   margin-left: 0;
   margin-right: 0;
@@ -592,20 +631,17 @@ td:last-child {
 }
 tt,
 code {
+  padding: 0 .4em;
   background-color: hsla(0, 0%, 0%, 0.04);
   border-radius: 3px;
   font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
     "Liberation Mono", Menlo, Courier, monospace;
-  padding: 0;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
 }
 pre code {
   background: none;
   line-height: 1.42;
 }
-code:before,
-code:after,
+
 tt:before,
 tt:after {
   letter-spacing: -0.2em;
@@ -617,6 +653,16 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+
+.post {
+  width: 930px;
+  background-color: rgba(255, 255, 255, .8);
+  padding:38px;
+  border-radius: 8px;
+  box-shadow:0 1px 2px rgba(25,25,25,0.5);
+  margin: 0 auto 24px;
+}
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
