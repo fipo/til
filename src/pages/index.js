@@ -29,15 +29,16 @@ const IndexPage = ({ data }) => (
               <Link to={node.frontmatter.path}>{node.frontmatter.title}</Link>
             </h2>
             <div dangerouslySetInnerHTML={{ __html: node.html }} />
-            <small>
+            <div className="post-author-and-date">
               <a
                 href={`https://twitter.com/${node.frontmatter.author}`}
                 target="_blanks"
               >
                 {node.frontmatter.author}
               </a>
+              <br/>
               {node.frontmatter.date}
-            </small>
+            </div>
           </article>
         );
       })}

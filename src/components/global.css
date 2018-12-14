@@ -631,9 +631,7 @@ td:last-child {
 }
 tt,
 code {
-  padding: 0 .4em;
   background-color: hsla(0, 0%, 0%, 0.04);
-  border-radius: 3px;
   font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
     "Liberation Mono", Menlo, Courier, monospace;
 }
@@ -661,6 +659,11 @@ pre tt:after {
   border-radius: 8px;
   box-shadow:0 1px 2px rgba(25,25,25,0.5);
   margin: 0 auto 24px;
+}
+
+.post-author-and-date {
+  text-align: right;
+  font-style: italic;
 }
 
 @media only screen and (max-width: 480px) {

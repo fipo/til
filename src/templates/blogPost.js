@@ -24,7 +24,6 @@ class BlogPost extends React.Component {
   }
 }
 
-export default BlogPost;
 
 export const postQuery = graphql`
   query BlogPostByPath($path: String!) {
@@ -39,3 +38,5 @@ export const postQuery = graphql`
     }
   }
 `;
+
+export default BlogPost;
