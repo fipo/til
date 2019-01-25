@@ -52,7 +52,10 @@ IndexPage.propTypes = {
 
 export const indexPageQuery = graphql`
   query BlogIndexQuery {
-    allMarkdownRemark {
+    allMarkdownRemark(
+    sort: { order: DESC, fields: [frontmatter___date] }
+    limit: 100
+    ) {
       edges {
         node {
           id
