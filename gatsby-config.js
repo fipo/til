@@ -1,5 +1,6 @@
 module.exports = {
   siteMetadata: {
+    siteUrl: 'https://til.philipsotirov.com',
     title: 'TIL by Philip Sotirov',
     description: 'My small TIL project for everyday inspiration.',
     author: '@fipo',
@@ -8,6 +9,7 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-catch-links',
     'gatsby-transformer-remark',
+    'gatsby-plugin-sitemap',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
