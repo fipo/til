@@ -14,23 +14,25 @@ exports.createPages = ({ graphql, actions }) => {
     resolve(
       graphql(
         `
-      {
-        allMarkdownRemark {
-          edges {
-            node {
-              id
-              html
-              frontmatter {
-                path
-                title
-                date
-                author
+          {
+            allMarkdownRemark(
+              sort: { fields: [frontmatter___date], order: DESC }
+            ) {
+              edges {
+                node {
+                  id
+                  html
+                  frontmatter {
+                    path
+                    title
+                    date
+                    author
+                  }
+                }
               }
             }
           }
-        }
-      }
-    `
+        `
       ).then(result => {
         if (result.errors) {
           reject(result.errors)

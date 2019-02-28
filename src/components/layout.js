@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Header from './header';
-import './global.css';
+import '../styles/global.css';
 
 const Layout = ({ children }) => (
   <React.Fragment>
