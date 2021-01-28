@@ -16,15 +16,15 @@ module.exports = {
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              classPrefix: "language-",
+              classPrefix: 'language-',
               inlineCodeMarker: null,
               aliases: {},
               showLineNumbers: false,
               noInlineHighlight: false,
             },
-          }
-        ]
-      }
+          },
+        ],
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -55,22 +55,13 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          {
-            family: `Open Sans`,
-            variants: [`400`, `700`, `800`]
-          },
-          {
-            family: `Lora`,
-            variants: [`400`, `700`]
-          },
-        ],
+        fonts: [`Open Sans\:400,700,800`, `Lora\:400,700`],
       },
-    }
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
   ],
-}
+};
